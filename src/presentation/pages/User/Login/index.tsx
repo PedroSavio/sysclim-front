@@ -8,6 +8,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
 import {AuthContext} from "../../../context/AuthContext";
 
+import logo from "@/assets/images/logo.png";
+
 export const LoginSchema = z.object({
   username: z.string().nonempty("CPF obrigatório"),
   senha: z.string().nonempty("Senha obrigatório"),
@@ -59,7 +61,7 @@ export default function Login () {
         <div>
           <form className="w-full max-w-md shadow-md bg-blue-600 p-6">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-white mb-2">Sysclim</h2>
+              <img className="rounded"src={logo}/>
             </div>
             <div className="mb-4">
               <label htmlFor="username" className="block text-white font-bold mb-2">CPF</label>
