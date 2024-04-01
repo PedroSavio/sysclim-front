@@ -2,8 +2,6 @@ import { Input } from "../../../components/ui/input";
 import { Button } from "../../../components/ui/button";
 import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
-import './index.css'
-
 
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -57,9 +55,9 @@ export default function Login () {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-screen bg-gray-400">
+      <div className="flex flex-col items-center justify-center h-screen bg-white">
         <div>
-          <form className="w-full max-w-md shadow-md p-6">
+          <form className="w-full max-w-md shadow-md bg-blue-600 p-6">
             <div className="mb-6">
               <h2 className="text-2xl font-bold text-white mb-2">Sysclim</h2>
             </div>
