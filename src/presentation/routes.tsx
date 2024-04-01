@@ -7,17 +7,17 @@ import {
     useNavigate,
 } from "react-router-dom";
 import Login from "./pages/User/Login";
-//import Template from "./layout/Template";
-
+import Template from "./layout/Template";
+import Dashboard from "./pages/Dashboard";
 import { AuthContext } from "./context/AuthContext";
 
-// const AddLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
-//     return (
-//         <>
-//             <Template exibirMenuNavegacao={false}>{children}</Template>
-//         </>
-//     );
-// };
+const AddLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
+    return (
+        <>
+            <Template exibirMenuNavegacao={false}>{children}</Template>
+        </>
+    );
+};
 
 const AuthenticateRounte: FC<{ children: React.ReactNode }> = ({
     children,
@@ -38,8 +38,16 @@ export default function Routes() {
         <React.StrictMode>
             <BrowserRouter>
                 <Router>
-                    <Route path="/" element={<Login />} />
-                    
+                    <Route path="/" element={
+                        <Login />
+                    } />
+                    <Route path="/dashboard" element={
+                        <AddLayout>
+                            {/* <AuthenticateRounte> */}
+                                <Dashboard />
+                            {/* </AuthenticateRounte> */}
+                        </AddLayout>
+                    }/>
                 </Router>
             </BrowserRouter>
         </React.StrictMode>
