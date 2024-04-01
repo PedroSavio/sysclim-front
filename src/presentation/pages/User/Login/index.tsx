@@ -51,7 +51,7 @@ export default function Login () {
     }else{
       console.log("entrou")
       setLoading(false);
-      navigate("/solicitacoes");
+      navigate("/dashboard");
     }
   };
 
@@ -59,7 +59,7 @@ export default function Login () {
     <>
       <div className="flex flex-col items-center justify-center h-screen bg-gray-400">
         <div>
-          <form className="w-full max-w-md bg-azul-escuro-padronizado shadow-md p-6">
+          <form className="w-full max-w-md shadow-md p-6">
             <div className="mb-6">
               <h2 className="text-2xl font-bold text-white mb-2">Sysclim</h2>
             </div>
@@ -90,11 +90,6 @@ export default function Login () {
             >
               Entrar
             </Button>
-            <img
-              className="mt-6 ml-2 w-full max-w-md"
-              src="public/assets/images/sedurbs-logo.png"
-              alt="SedurbsLogo"
-            />
           </form >
         </div>
       </div>
