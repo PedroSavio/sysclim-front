@@ -1,0 +1,1 @@
+export { authenticate } from "../actions/post/authenticate";
